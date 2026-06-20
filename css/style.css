@@ -1,0 +1,297 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #f7f9fc 0%, #e9eef3 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    /* main card – glassmorphism + soft shadow */
+    .hub-card {
+      max-width: 1200px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 3.5rem 3.5rem 2.5rem 2.5rem;
+      box-shadow: 0 25px 50px -10px rgba(0, 20, 30, 0.25),
+                  inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+      padding: 2.5rem 2.8rem 3.2rem;
+      transition: all 0.2s ease;
+      animation: floatIn 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes floatIn {
+      0% { opacity: 0; transform: translateY(40px) scale(0.97); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* header */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.8rem;
+      border-bottom: 2px dashed rgba(60, 80, 100, 0.15);
+      padding-bottom: 1.25rem;
+    }
+
+    .title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .title-group i {
+      font-size: 2.6rem;
+      color: #2a4b6e;
+      background: rgba(42, 75, 110, 0.08);
+      padding: 0.6rem;
+      border-radius: 18px;
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+    }
+
+    .title-group h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #1a2e44;
+      background: linear-gradient(135deg, #1a2e44 0%, #2b5a7a 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #3d5a73;
+      background: rgba(60, 90, 110, 0.08);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .subhead i {
+      font-size: 0.9rem;
+      color: #2f6b8a;
+    }
+
+    /* student grid – responsive */
+    .student-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.5rem;
+      margin: 1.8rem 0 0.5rem;
+    }
+
+    /* each student card */
+    .student-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 2.2rem;
+      padding: 1.1rem 0.5rem 0.9rem;
+      text-align: center;
+      box-shadow: 0 8px 18px -6px rgba(0, 20, 30, 0.08),
+                  inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+      transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1);
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      animation: cardPop 0.5s ease backwards;
+      transform-origin: center;
+    }
+
+    .student-card:nth-child(1) { animation-delay: 0.02s; }
+    .student-card:nth-child(2) { animation-delay: 0.05s; }
+    .student-card:nth-child(3) { animation-delay: 0.08s; }
+    .student-card:nth-child(4) { animation-delay: 0.11s; }
+    .student-card:nth-child(5) { animation-delay: 0.14s; }
+    .student-card:nth-child(6) { animation-delay: 0.17s; }
+    .student-card:nth-child(7) { animation-delay: 0.20s; }
+    .student-card:nth-child(8) { animation-delay: 0.23s; }
+    .student-card:nth-child(9) { animation-delay: 0.26s; }
+    .student-card:nth-child(10) { animation-delay: 0.29s; }
+    .student-card:nth-child(11) { animation-delay: 0.32s; }
+    .student-card:nth-child(12) { animation-delay: 0.35s; }
+    .student-card:nth-child(13) { animation-delay: 0.38s; }
+    .student-card:nth-child(14) { animation-delay: 0.41s; }
+    .student-card:nth-child(15) { animation-delay: 0.44s; }
+    .student-card:nth-child(16) { animation-delay: 0.47s; }
+    .student-card:nth-child(17) { animation-delay: 0.50s; }
+    .student-card:nth-child(18) { animation-delay: 0.53s; }
+    .student-card:nth-child(19) { animation-delay: 0.56s; }
+    .student-card:nth-child(20) { animation-delay: 0.59s; }
+    .student-card:nth-child(21) { animation-delay: 0.62s; }
+    .student-card:nth-child(22) { animation-delay: 0.65s; }
+    .student-card:nth-child(23) { animation-delay: 0.68s; }
+    .student-card:nth-child(24) { animation-delay: 0.71s; }
+    .student-card:nth-child(25) { animation-delay: 0.74s; }
+    .student-card:nth-child(26) { animation-delay: 0.77s; }
+    .student-card:nth-child(27) { animation-delay: 0.80s; }
+    .student-card:nth-child(28) { animation-delay: 0.83s; }
+    .student-card:nth-child(29) { animation-delay: 0.86s; }
+    .student-card:nth-child(30) { animation-delay: 0.89s; }
+    .student-card:nth-child(31) { animation-delay: 0.92s; }
+    .student-card:nth-child(32) { animation-delay: 0.95s; }
+    .student-card:nth-child(33) { animation-delay: 0.98s; }
+
+    @keyframes cardPop {
+      0% { opacity: 0; transform: scale(0.88) translateY(14px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .student-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 16px 32px -10px rgba(18, 52, 77, 0.25);
+      border-color: rgba(70, 130, 180, 0.3);
+    }
+
+    /* ID text */
+    .student-id {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #0b2a3f;
+      letter-spacing: 0.4px;
+      background: rgba(200, 215, 230, 0.2);
+      padding: 0.2rem 0.2rem;
+      border-radius: 40px;
+      transition: 0.2s;
+      display: inline-block;
+    }
+
+    .student-card:hover .student-id {
+      color: #004070;
+    }
+
+    /* tiny icon */
+    .card-icon {
+      display: block;
+      font-size: 1.1rem;
+      color: #5b7f9b;
+      margin-bottom: 4px;
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+    .student-card:hover .card-icon {
+      opacity: 1;
+      color: #1f6390;
+      transform: rotate(3deg) scale(1.05);
+    }
+
+    /* footer / meta */
+    .footer-meta {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      border-top: 1px solid rgba(80, 110, 130, 0.12);
+      padding-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #2b4f68;
+    }
+
+    .badge-count {
+      background: rgba(40, 70, 100, 0.06);
+      padding: 0.4rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .badge-count i {
+      margin-right: 6px;
+      color: #2f6b8a;
+    }
+
+    .click-hint {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #3c637e;
+    }
+
+    .click-hint i {
+      font-size: 1rem;
+      animation: pulseArrow 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulseArrow {
+      0% { opacity: 0.3; transform: translateX(0); }
+      50% { opacity: 1; transform: translateX(5px); }
+      100% { opacity: 0.3; transform: translateX(0); }
+    }
+
+    /* responsive */
+    @media (max-width: 650px) {
+      .hub-card {
+        padding: 1.8rem 1.2rem 2rem;
+        border-radius: 2.5rem;
+      }
+      .title-group h1 {
+        font-size: 1.9rem;
+      }
+      .title-group i {
+        font-size: 2rem;
+      }
+      .subhead {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.9rem;
+        margin-top: 6px;
+      }
+      .student-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 1rem;
+      }
+      .student-card {
+        padding: 0.9rem 0.2rem;
+      }
+      .student-id {
+        font-size: 1rem;
+      }
+      .footer-meta {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .student-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 0.8rem;
+      }
+      .student-id {
+        font-size: 0.9rem;
+      }
+      .hub-card {
+        padding: 1.2rem 0.8rem 1.5rem;
+      }
+    }
+
+    /* dummy link style – just for demonstration (no actual link, but opens example.com) */
+    .student-card {
+      position: relative;
+    }
+
+    /* pseudo element for micro interaction */
+    .student-card:active {
+      transform: scale(0.96);
+      transition-duration: 0.06s;
+    }
