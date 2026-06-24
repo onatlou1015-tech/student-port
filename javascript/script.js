@@ -31,7 +31,7 @@
         'M3128': 'https://github.io/portfolio/',
         'M3129': 'https://github.io/portfolio/',
         'M3130': 'https://github.io/portfolio/',
-        'M3201	'https://M3201JavaJuggler.github.io/portfolio32/',
+        'M3201': 'https://M3201JavaJuggler.github.io/portfolio32/',
         'M3203':'https://M3203LabCoatCoder.github.io/portfolio32/',
         'M3204':'https://M32LearnByCoding.github.io/portfolio32/',
         'M3205':'https://LabCoatCoder.github.io/portfolio32/',
@@ -62,7 +62,6 @@
         'M3230':'https://ZenCoder.github.io/portfolio32/',
         'M3202':'https://M3203KernelKid.github.io/portfolio32/'    
     };
-
     
     const colorPalette = [
         '#000000',',#000000','#000000','#000000','#000000','#000000','#000000',
